@@ -1,0 +1,51 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "alt+n",
+    "command": "vim.remap",
+    "when": "inputFocus && (vim.mode == 'Insert' || vim.mode == 'Visual' || vim.mode == 'VisualLine')",
+    "args": {
+      "after": [
+        "<Esc>"
+      ]
+    }
+  },
+  {
+    "key": "alt+.",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "alt+,",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !editorFocus && !inputFocus"
+  },
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !editorFocus && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
+  },
+  {
+    "key": "q",
+    "command": "runCommands",
+    "when": "filesExplorerFocus",
+    "args": {
+    "commands": ["workbench.action.focusActiveEditorGroup", "workbench.action.closeSidebar"]
+    }
+  },
+  {
+    "key": "/",
+    "command": "list.find",
+    "when": "filesExplorerFocus"
+  }
+]
